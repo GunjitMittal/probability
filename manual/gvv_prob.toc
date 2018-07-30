@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Preliminaries}{1}
+\contentsline {subsection}{\numberline {1.1}The Gaussian Distribution}{1}
+\contentsline {subsection}{\numberline {1.2}CDF and PDF}{2}
+\contentsline {section}{\numberline {2}Hypothesis}{3}
+\contentsline {subsection}{\numberline {2.1}Detection \& Estimation}{3}
+\contentsline {subsection}{\numberline {2.2}The MAP criterion}{4}
+\contentsline {section}{\numberline {3}Transformation of Variables}{5}
+\contentsline {subsection}{\numberline {3.1}Using Definition}{5}
+\contentsline {subsection}{\numberline {3.2}Using Jacobian}{5}
+\contentsline {section}{\numberline {4}Conditional Probability}{5}
+\contentsline {section}{\numberline {5}Two Dimensions}{5}
+\contentsline {section}{\numberline {6}Transform Domain}{5}
+\contentsline {section}{\numberline {7}Random Number Generation}{6}
+\contentsline {subsection}{\numberline {7.1}Uniform Random Numbers}{6}
+\contentsline {subsection}{\numberline {7.2}Central Limit Theorem}{6}
+\contentsline {subsection}{\numberline {7.3}From Uniform to Other}{6}
