@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.30)  22 FEB 2019 13:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Termux) (preloaded format=latex 2018.11.1)  23 FEB 2019 16:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **gvv_prob.tex
 (./gvv_prob.tex
 LaTeX2e <2018-04-01> patch level 2
-Babel <3.18> and hyphenation patterns for 3 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 85 language(s) loaded.
 
 (/data/data/com.termux/files/usr/share/texlive/texmf-dist/tex/latex/IEEEtran/IE
 EEtran.cls
@@ -738,18 +738,14 @@ ML/txmi/m/it/12 E[] [] \OT1/txr/m/n/12 = \OML/txmi/m/it/12 ^^M; N \OMS/txsy/m/n
 
 
 ]) (./chapter5/ch5.tex) (./chapter6/ch6.tex) (./chapter7/ch7.tex) [2]
-(./gvv_prob.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(./gvv_prob.aux) ) 
 Here is how much of TeX's memory you used:
- 7539 strings out of 494591
- 116910 string characters out of 6176027
- 384286 words of memory out of 5000000
- 11030 multiletter control sequences out of 15000+600000
+ 7539 strings out of 492645
+ 116910 string characters out of 6118921
+ 389247 words of memory out of 5000000
+ 11281 multiletter control sequences out of 15000+600000
  67844 words of font info for 167 fonts, out of 8000000 for 9000
- 17 hyphenation exceptions out of 8191
+ 1144 hyphenation exceptions out of 8191
  36i,13n,40p,500b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on gvv_prob.dvi (2 pages, 11764 bytes).
