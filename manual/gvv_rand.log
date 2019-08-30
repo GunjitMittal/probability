@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  30 AUG 2019 07:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  30 AUG 2019 10:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1299,39 +1299,31 @@ File: tlc.eps Graphic file (type eps)
 \tf@toc=\write6
 \openout6 = `gvv_rand.toc'.
 
+File: ./figs/uni_cdf.eps Graphic file (type eps)
+ <./figs/uni_cdf.eps>
+File: ./figs/gauss_cdf.eps Graphic file (type eps)
+ <./figs/gauss_cdf.eps> [1
+
+
+]
 File: ./figs/gauss_pdf.eps Graphic file (type eps)
- <./figs/gauss_pdf.eps> [1
 
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 472.
- [2
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 472.
+<./figs/gauss_pdf.eps> [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 424.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 424.
  (./gvv_rand.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 472.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 472.
-
-
-Package rerunfilecheck Warning: File `gvv_rand.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `gvv_rand.out':
-(rerunfilecheck)             Before: 372916E46F2CA11B7676079FD69420C5;303
-(rerunfilecheck)             After:  7CE2ABC9D7B27A425A27A23858E94CB5;197.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 424.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 424.
+Package rerunfilecheck Info: File `gvv_rand.out' has not changed.
+(rerunfilecheck)             Checksum: 2FC7DFF98D8F3E81E82987A8EBCDBB28;169.
  ) 
 Here is how much of TeX's memory you used:
- 24487 strings out of 492615
- 480073 string characters out of 6118492
- 581898 words of memory out of 5000000
- 27956 multiletter control sequences out of 15000+600000
+ 24491 strings out of 492615
+ 480169 string characters out of 6118492
+ 618899 words of memory out of 5000000
+ 27958 multiletter control sequences out of 15000+600000
  67844 words of font info for 167 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 54i,7n,67p,794b,1153s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,12n,67p,794b,1149s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on gvv_rand.dvi (2 pages, 16928 bytes).
+Output written on gvv_rand.dvi (2 pages, 20860 bytes).

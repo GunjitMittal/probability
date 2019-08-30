@@ -288,11 +288,13 @@ of Electrical Engineering, Indian Institute of Technology, Hyderabad
 
 \tableofcontents
 
+\bigskip
+
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 
 \begin{abstract}
-This manual provides a simple introduction to various concepts in optimization.
+This manual provides a simple introduction to the generation of random numbers
 \end{abstract}
 %%
 \section{Uniform Random Numbers}
@@ -300,16 +302,37 @@ Let $U$ be a uniform random variable between 0 and 1.
 \begin{enumerate}[label=\thesection.\arabic*
 ,ref=\thesection.\theenumi]
 \item Generate $10^6$ samples of $U$ using a C program and save into a file called uni.dat .
+\\
+\solution Execute the following C program.
+\begin{lstlisting}
+wget https://github.com/gadepall/probability/raw/master/manual/codes/exrand.c
+wget https://github.com/gadepall/probability/raw/master/manual/codes/coeffs.h
+\end{lstlisting}
 
 %
 \item
-Load the uni.dat file into python and plot the empirical CDF of $U$ using the samples in uni.dat.
+Load the uni.dat file into python and plot the empirical CDF of $U$ using the samples in uni.dat. The CDF is defined as
+\begin{align}
+F_{U}(x) = \pr{U \le x}
+\end{align}
+\\
+\solution  The following code plots Fig. \ref{fig:uni_cdf}
+\begin{lstlisting}
+wget https://github.com/gadepall/probability/raw/master/manual/codes/cdf_plot.py
+\end{lstlisting}
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{./figs/uni_cdf}
+\caption{The CDF of $U$}
+\label{fig:uni_cdf}
+\end{figure}
 
 %
 \item
-Verify that your CDF in the above problem is correct by plotting the theoretical $F_{U}(x)$.
+Find a  theoretical expression for $F_{U}(x)$.
+
 \item
-The mean of a random variable $U$ is defined as
+The mean of $U$ is defined as
 %
 \begin{equation}
 E\sbrak{U} = \frac{1}{N}\sum_{i=1}^{N}U_i
@@ -321,13 +344,17 @@ and its variance as
 \text{var}\sbrak{U} = E\sbrak{U- E\sbrak{U}}^2 
 \end{equation}
 
- Find the mean and variance of $U$. How would you obtain it theoretically?
-
+Write a C program to  find the mean and variance of $U$. 
+\item Verify your result theoretically given that
+\end{enumerate}
 %
-\subsection{Central Limit Theorem}
+\begin{equation}
+E\sbrak{U^k} = \int_{-\infty}^{\infty}x^kdF_{U}(x)
+\end{equation}
+\section{Central Limit Theorem}
 %
-\item
-Generate $U_i, i = 1,2,\dots, 12$, a set of independent uniform random variables between 0 and 1 using a C program.
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
 
 %
 \item
@@ -337,28 +364,46 @@ Generate $10^6$ samples of the random variable
 X = \sum_{i=1}^{12}U_i -6
 \end{equation}
 %
+using a C program, where $U_i, i = 1,2,\dots, 12$ are  a set of independent uniform random variables between 0 and 1
 and save in a file called gau.dat
 
 %
 \item
 Load gau.dat in python and plot the empirical CDF of $X$ using the samples in gau.dat. What properties does a CDF have?
-\item
-Load gau.dat in python and plot the empirical PDF of $X$ using the samples in gau.dat. What properties does the CDF have?
 \\
-\solution
-\begin{lstlisting}
-https://github.com/gadepall/EE1390/raw/master/manuals/supervised/linear_class/codes/1.4.py
-\end{lstlisting}
+\solution The CDF of $X$ is plotted in Fig. \ref{fig:gauss_cdf}
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{./figs/gauss_cdf}
+\caption{The CDF of $X$}
+\label{fig:gauss_cdf}
+\end{figure}
+\item
+Load gau.dat in python and plot the empirical PDF of $X$ using the samples in gau.dat. The PDF of $X$ is defined as
+\begin{align}
+p_{X}(x) = \frac{d}{dx}F_{X}(x)
+\end{align}
+What properties does the PDF have?
+\\
+\solution The PDF of $X$ is plotted in Fig. \ref{fig:gauss_pdf}
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{./figs/gauss_pdf}
 \caption{The PDF of $X$}
-\label{ch1_prob4_fig}
+\label{fig:gauss_pdf}
 \end{figure}
 
-\item Find the mean and variance of $X$
+\item Find the mean and variance of $X$ by writing a C program.
+\item Given that 
+\begin{align}
+p_{X}(x) = \frac{1}{\sqrt{2\pi}}\exp\brak{-\frac{x^2}{2}}, -\infty < x < \infty,
+\end{align}
+repeat the above exercise theoretically.
 %
-\subsection{From Uniform to Other}
+\end{enumerate}
+\section{From Uniform to Other}
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
 %
 \item
 Generate samples of 
@@ -367,107 +412,14 @@ Generate samples of
 V = -2\ln\brak{1-U}
 \end{equation}
 %
-and plot its CDF.  Comment.
+and plot its CDF.  
+\item Find a theoretical expression for $F_V(x)$.
 
 %
 %\item
 %Generate the Rayleigh distribution from Uniform. Verify your result through graphical plots.
 \end{enumerate}
 
-%\section{The Gaussian Distribution}
-%\begin{enumerate}[label=\thesection.\arabic*
-%,ref=\thesection.\theenumi]
-%
-%\item
-%\label{ch1_prob1}
-%Generate a Gaussian random number with 0 mean and unit variance.
-%
-%%
-%\solution Open a text editor and type the following program.
-%
-%%%
-%\lstinputlisting{./codes/1.1.py}
-%%%
-%Save the file as gaussian\_no.py and run the program.
-%%
-%%
-%Verify that the program in \ref{ch1_prob1} actually generates a Gaussian random variable with 0 mean and unit variance.
-%
-%\solution  Use the header in the previous program, type the following code and execute.
-%\lstinputlisting{./codes/1.2.py}
-%%
-%%
-%\item
-%Using the previous program, verify you results for different values of the mean and variance.
-%
-%\end{enumerate}
-%
-%\section{CDF and PDF}
-%\begin{enumerate}[label=\thesection.\arabic*
-%,ref=\thesection.\theenumi]
-%
-%\item
-%A Gaussian random variable $X$ with mean 0 and unit variance can be expressed as $X \sim \mathcal{N}\brak{0,1}$. Its cumulative distribution function (CDF) is defined as
-%\begin{equation}
-%F_X(x) = \pr{X < x}, 
-%\end{equation}
-%Plot $F_X(x)$.
-%
-%\solution  The following code yields Fig. \ref{ch1_prob3_fig}.
-%\lstinputlisting{./codes/1.3.py}
-%%
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{./figs/gauss_cdf}
-%\caption{CDF of $X$}
-%\label{ch1_prob3_fig}
-%\end{figure}
-%%
-%\item
-%List the properties of $F_X(x)$ based on Fig. \ref{ch1_prob3_fig}.
-%
-%%
-%\item
-%Let
-%%
-%\begin{equation}
-%p_{X}(x_i) = \frac{F_{X}(x_i)-F_{X}(x_{i-1})}{h}, i = 1, 2, \dots
-%{h}
-%\end{equation}
-%%
-%for $x_i = x_{i-1}+h, x_1 = -4$. Plot $p_X(x_i)$.  On the same graph, plot
-%%
-%\begin{equation}
-%p_{X}(x) = \frac{1}{\sqrt{2\pi}}e^{-x^2/2}, - 4 < x < 4
-%\end{equation}
-%%
-%
-%%
-%\solution The following code yields the graph in Fig. \ref{ch1_prob4_fig}
-%\begin{lstlisting}
-%https://github.com/gadepall/EE1390/raw/master/manuals/supervised/linear_class/codes/1.4.py
-%\end{lstlisting}
-%\begin{figure}
-%\centering
-%\includegraphics[width=\columnwidth]{./figs/gauss_pdf}
-%\caption{The PDF of $X$}
-%\label{ch1_prob4_fig}
-%\end{figure}
-%%
-%Thus, the PDF is the derivative of the CDF.  For $X\sim \mathcal{N}\brak{0,1}$, the PDF is
-%%
-%\begin{equation}
-%p_{X}(x) = \frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}, \quad -\infty < x < \infty
-%\end{equation}
-%\item
-%%
-%For $X\sim \mathcal{N}\brak{\mu,\sigma^2}$,
-%\begin{equation}
-%p_{X}(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{\brak{x-\mu}^2}{2\sigma^2}}, \quad -\infty < x < \infty
-%\end{equation}
-%Plot $p_{X}(x)$ for different values of $\mu$ and $\sigma$ in the same graph.  Comment.
-%%
-%\end{enumerate}
 
 \end{document}
 
