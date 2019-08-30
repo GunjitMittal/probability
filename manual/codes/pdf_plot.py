@@ -18,6 +18,7 @@ err = [] #declaring probability list
 pdf = [] #declaring pdf list
 h = 2*maxlim/(maxrange-1);
 #randvar = np.random.normal(0,1,simlen)
+#randvar = np.loadtxt('uni.dat',dtype='double')
 randvar = np.loadtxt('gau.dat',dtype='double')
 
 for i in range(0,maxrange):
@@ -43,9 +44,13 @@ plt.ylabel('$p_X(x_i)$')
 plt.legend(["Numerical","Theory"])
 
 #if using termux
-plt.savefig('gauss_pdf.pdf')
-plt.savefig('gauss_pdf.eps')
-subprocess.run(shlex.split("termux-open gauss_pdf.pdf"))
+#plt.savefig('../figs/uni_pdf.pdf')
+#plt.savefig('../figs/uni_pdf.eps')
+#subprocess.run(shlex.split("termux-open ../figs/uni_pdf.pdf"))
+#if using termux
+plt.savefig('../figs/gauss_pdf.pdf')
+plt.savefig('../figs/gauss_pdf.eps')
+subprocess.run(shlex.split("termux-open ../figs/gauss_pdf.pdf"))
 #else
 #plt.show() #opening the plot window
 
