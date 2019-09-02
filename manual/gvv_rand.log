@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.6.30)  30 AUG 2019 10:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.7.16)  31 AUG 2019 21:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1318,10 +1318,10 @@ Package rerunfilecheck Info: File `gvv_rand.out' has not changed.
 (rerunfilecheck)             Checksum: 2FC7DFF98D8F3E81E82987A8EBCDBB28;169.
  ) 
 Here is how much of TeX's memory you used:
- 24491 strings out of 492615
- 480169 string characters out of 6118492
- 618899 words of memory out of 5000000
- 27958 multiletter control sequences out of 15000+600000
+ 24491 strings out of 492624
+ 480169 string characters out of 6119216
+ 618855 words of memory out of 5000000
+ 27957 multiletter control sequences out of 15000+600000
  67844 words of font info for 167 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  54i,12n,67p,794b,1149s stack positions out of 5000i,500n,10000p,200000b,80000s
